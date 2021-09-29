@@ -7,7 +7,7 @@ use App\Traits\FakerTrait;
 
 class Faker extends Component {
     use FakerTrait;
-    public $cadena, $metodo, $res = '';
+    public $cadena, $metodo, $res = '', $msj;
     public function render() {
         return view('livewire.faker');
     }
@@ -24,12 +24,12 @@ class Faker extends Component {
                     $this->res = $this->bothify($this->cadena);
                 break;
                 default:
-                    $this->res = 'Seleccione una opción';
+                    $this->msj = 'Selecciona una opción';
                 break;
             }
         }
         else {
-            $this->res = 'Ingrese una cadena';
+            $this->msj = 'Ingresa una cadena';
         }
     }
 }

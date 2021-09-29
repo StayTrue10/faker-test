@@ -1,9 +1,10 @@
 <div>
+    <p class="text-secondary fs-5">Ingresa una cadena:</p>
     <div class="form-floating mb-3">
         <input wire:model="cadena" type="text" class="form-control" id="cadena" placeholder="Cadena">
         <label for="cadena">Cadena</label>
     </div>
-    <label>Convertir a :</label>
+    <p class="text-secondary fs-5">Convertir a:</p>
     <div class="mb-3">
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" wire:model="metodo" name="metodo" id="radio1" value="1">
@@ -21,5 +22,10 @@
     <div class="d-grid">
         <button wire:click.prevent="convertir()" class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Convertir</button>
     </div>
-    <small class="text-danger py-1">{{ $res }}</small>
+    <p class="text-secondary my-3 fs-5">Respuesta: </p>
+    @if($res != null)
+        <p class="text-info mt-3">{{ $res }}</p>
+    @elseif($msj != null)
+        <p class="text-danger mt-3">{{ $msj }}</p>
+    @endif
 </div>

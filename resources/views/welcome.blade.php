@@ -24,7 +24,7 @@
             <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
                 <div class="card border-0 shadow rounded-3 my-5">
                     <div class="card-body p-4 p-sm-5">
-                        <h5 class="card-title text-center mb-5 fw-light fs-5">FAKER</h5>
+                        <h5 class="card-title text-center mb-5 fw-bold fs-4">FAKER</h5>
                         @livewire('faker')
                     </div>
                 </div>
